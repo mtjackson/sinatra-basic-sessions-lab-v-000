@@ -11,6 +11,8 @@ class App < Sinatra::Base
     set :session_secret, "secret"
   end
 
-  post '/checkout'
+  post '/checkout' do
+    @session = session
+  end
 
 end
